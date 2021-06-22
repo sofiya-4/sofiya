@@ -1,0 +1,97 @@
+Download jdk from ms teams and install it.
+Download eclipse_kepler and extract it
+open eclipse folder
+right click on eclispe application
+select run as administrator.
+click yes button
+location - your choice( c:\ or d:\ or e:\)
+
+1.create project:
+------------------
+select file/new/java project
+name - Code_Camp
+finish.
+
+2.create package:
+------------------
+right click on created project
+select new/package
+name - pack1
+
+3.create class:
+----------------
+right click on created package
+select new/class
+name - File1
+check public static void main(String[] args)
+
+package Pack1;
+public class File1 
+{
+public static void main(String[] args) 
+{
+ System.out.println("welcome");
+}
+}
+
+save and run
+
+output:
+welcome
+
+--------------------------------------------------------------------------------------------
+
+Problem Description:
+--------------------
+Given an array of elements as input you need to find the sum of even elements in even index
+position of the given array and find the sum of odd elements in odd index position of the
+given array and then print even sum followed by odd sum seperated by space. If the array does not have any even elements or any odd elements then you need to print sum as 0.
+
+
+Sample input1:
+n -> 5
+elements -> 1 2 3 4 5
+
+Sample output:
+0 0
+
+Sample input2:
+n -> 5
+elements -> 10 20 45 61 73
+
+Sample output:
+10 61
+
+
+package Pack1;
+import java.util.*;
+public class File1 {
+	public static void main(String[] args) {
+		int n , e_sum =0, o_sum =0;
+		Scanner obj = new Scanner(System.in);
+		System.out.println("Enter Array size:");
+		n = obj.nextInt(); // 5
+		int a[] = new int[n];
+		
+		//input 5 values
+		for(int i =0; i< n; i++)
+		{
+			a[i] = obj.nextInt(); // 1 2 3 4 5
+		}
+		for(int i=0; i < n; i++)
+		{
+			if(a[i]%2==0 && i%2==0)
+				e_sum = e_sum+a[i];
+			else if(a[i]%2==1 && i%2 ==1)
+				o_sum = o_sum + a[i];
+		}
+		System.out.println(e_sum+ " "+o_sum);	
+	}
+}
+
+Enter Array size:
+5
+1 2 3 4 5
+0 0
+
+==========================================================================================
